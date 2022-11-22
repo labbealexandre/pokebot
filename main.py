@@ -3,7 +3,7 @@ from pokebot.simulation import Simulation
 
 
 def main():
-    input_queue = Queue()
+    input_queue: "Queue[int]" = Queue()
     emulator_job = Process(
         target=Simulation,
         args=("roms/heartgold.nds", input_queue),
